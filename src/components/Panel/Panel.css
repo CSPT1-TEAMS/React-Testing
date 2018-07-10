@@ -1,3 +1,7 @@
+.component-panel {
+  width: 45%;
+}
+
 .component-button-panel {
     background-color: #858694;
     display: flex;
