@@ -11,7 +11,7 @@ class Button extends Component {
         const classNames = [
             'component-button',
             this.props.orange ? 'orange' : '',
-            this.props.wide ? 'wide' : '',
+            // this.props.wide ? 'wide' : '',
         ];
         return (
             <div className={classNames.join(' ').trim()}>

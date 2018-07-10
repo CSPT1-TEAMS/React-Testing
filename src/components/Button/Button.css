@@ -1,6 +1,8 @@
 .component-button {
     display: inline-flex;
-    width: 25%;
+    width: 20%;
+    height: 30pt;
+    margin: 2px 2px 2px 2px;
     flex: 1 0 auto;
 }
 
@@ -23,5 +25,10 @@
 
 .component-button.orange button {
     background-color: #F5923E;
+    color: white;
+}
+
+.component-button.blue button {
+    background-color: rgb(62, 120, 245);
     color: white;
 }

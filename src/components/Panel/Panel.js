@@ -38,6 +38,7 @@ class Panel extends Component {
                 <div>
                     <Button name="0" clickHandler={this.handleClick} wide />
                     <Button name="." clickHandler={this.handleClick} />
+                    <Button name="HISTORY" clickHandler={this.handleClick} blue/>
                     <Button name="=" clickHandler={this.handleClick} orange />
                 </div>
             </div>
