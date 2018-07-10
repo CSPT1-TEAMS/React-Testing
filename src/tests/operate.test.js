@@ -13,8 +13,12 @@ describe('<Operate />', () => {
     ReactDOM.render(<Operate />, div);
   });
 
+});
+
+// test button values
+describe('<Button />', () => {
   it('should display `1` when `1 button` is clicked', () => {
-    const wrapper = shallow(<Operate />)
-    expect(wrapper).toBe(0);
+    const wrapper = shallow(<Button />)
+    expect(name).toBe(0);
   })
 });
