@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import Display from '../components/Display/Display';
 
-Enzyme.configure({ adapter: new Adapter() });
 
-describe('<Display />', () => {
+describe('<Display /> Component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Display />, div);
   });
+
+  it('should render the value prop', () => {
+    const props = {
+      value: "Render this string"
+    }
+    const wrapper = shallow(<Display {...props} />);
+    expect(wrapper.text()).toMatch(props.value);
+  })
 });
