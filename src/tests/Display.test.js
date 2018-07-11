@@ -12,5 +12,8 @@ describe('<Display />', () => {
     ReactDOM.render(<Display />, div);
   });
 
-  it('')
+  it('should have value match passed value', () => {
+    const wrapper = shallow(<Display />)
+    expect(wrapper.children()).toHaveLength(1)
+  })
 });
