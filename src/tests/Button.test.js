@@ -11,4 +11,18 @@ describe('<Button />', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Button />, div);
   });
+
+  it('renders correctly', () => {
+    const wrapper = shallow(<Button />)
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('orange/ wide should be true/ false', () => {
+    const wrapper = shallow((
+        <div className='component-button orange' />
+    ));
+    expect(wrapper.contains(<div className='component-button'/>)).toBe(true)
+
+
+  })
 });

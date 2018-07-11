@@ -6,6 +6,8 @@ import './App.css';
 
 class App extends Component {
     state = {
+        // this.state.total = value of string. Sent to Display as a proptype of string value
+
         total: '0',
         next: null,
         operation: null

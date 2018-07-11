@@ -6,7 +6,8 @@ const Display = ({ value }) => {
     return (
         <div className="component-display">
             <div>
-                {value}
+            {/* expecting this value to be a string */}
+                {value} 
             </div>
         </div>
     );
