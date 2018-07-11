@@ -11,4 +11,13 @@ describe('<Button />', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Button />, div);
   });
+
+  it('should respond to correct button click', () => {
+    const wrapper = shallow(<Button />)
+    const instance = wrapper.instance()
+    const button = wrapper.find('AC')
+    console.log(button)
+  })
+
 });
+

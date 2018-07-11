@@ -12,3 +12,7 @@ describe('<Panel />', () => {
     ReactDOM.render(<Panel />, div);
   });
 });
+
+
+
+ 
