@@ -11,4 +11,20 @@ describe('<Button />', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Button />, div);
   });
+   it ('renders correctly',() => {
+     const wrapper = shallow(<Button/>)
+     expect(wrapper).toMatchSnapshot()
+   })
+
+   it('should call cb function on click' ,() => {
+    const wrapper = shallow(<Button/>)
+    const instance = wrapper.instance()
+    const button = wrapper.find('.component-button')
+    const button = jest.fn(() => {})
+    button.simulate('click')
+ 
+  })
+
+  
+   
 });
