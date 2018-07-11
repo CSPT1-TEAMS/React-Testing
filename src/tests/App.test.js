@@ -10,5 +10,12 @@ describe('<App />', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<App />, div);
-  });
+  })
+
+  it('should start at 0', () => {
+    const wrapper = shallow(<App />);
+    const instance = wrapper.instance();
+    expect(instance.state.total).toBe("0");
+    expect(wrapper).toMatchSnapshot();
+  })
 });

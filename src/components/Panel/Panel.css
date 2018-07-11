@@ -12,3 +12,7 @@
     flex: 1 0 auto;
     display: flex;
 }
+
+div {
+    min-height: 50px;
+}
