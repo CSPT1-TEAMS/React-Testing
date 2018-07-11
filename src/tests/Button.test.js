@@ -8,10 +8,20 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('<Button />', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Button />, div);
+    const wrapper = shallow(<Button />)
+  });
+  
+  
+});
+
+describe('Class names', () => {
+
+  it('recognizes proper class name', () => {
+    const wrapper = shallow(<Button orange />)
+    // console.log('wrapper', wrapper.props)
+    expect(wrapper.hasClass('orange')).toBeTruthy();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  
 
-});
+})
