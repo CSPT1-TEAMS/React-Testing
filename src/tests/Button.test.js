@@ -13,10 +13,12 @@ describe('<Button />', () => {
   });
 
   it('should respond to correct button click', () => {
-    const wrapper = shallow(<Button />)
-    const instance = wrapper.instance()
-    const button = wrapper.find('AC')
-    console.log(button)
+    const clickHandler = jest.fn()
+    const wrapper = shallow(<Button clickHandler={clickHandler} />)
+    const button = wrapper.find('button')
+    button.simulate('click')
+
+    expect(clickHandler).toHaveBeenCalled()
   })
 
 });
