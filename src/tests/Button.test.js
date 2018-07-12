@@ -17,12 +17,12 @@ describe('<Button />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('orange/ wide should be true/ false', () => {
-    const wrapper = shallow((
-        <div className='component-button orange' />
-    ));
-    expect(wrapper.contains(<div className='component-button'/>)).toBe(true)
+  it('should call component-button orange when orange gets passed in', () => {
+    const wrapper = shallow(<Button />)
+    // .find('.component-button'), and .find('orange')
+  });
 
+  it('should call component-button wide when wide gets passed in', () => {
 
-  })
+  });
 });

@@ -20,11 +20,17 @@ describe('<App />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('Should start with 0', () => {
+  it('should render a div called component-app', () => {
     const wrapper = shallow(<App />)
-    const instance = wrapper.instance()
+    expect(wrapper.find('.component-app')).toHaveLength(1)
+  });
 
-    expect(instance.state.total).toBe('0')
+  it('Should start with 0 and properties next, and operation in state', () => {
+    const wrapper = shallow(<App />)
+
+    expect(wrapper.state('total')).toEqual('0')
+    expect(wrapper.state('next')).toBeDefined();
+    expect(wrapper.state('operation')).toBeDefined();
   });
 
   it('handleClick function should work', () => {
@@ -34,5 +40,13 @@ describe('<App />', () => {
     instance.handleClick()
     expect(calculate).toBeCalled()
 
+  });
+
+  it('should have handleClick that changes state', () => {
+    const wrapper = shallow(<App />)
+    const instance = wrapper.instance()
+
+    instance.handleClick("5")
+    expect(wrapper.state('next')).toEqual("5");
   });
 });
